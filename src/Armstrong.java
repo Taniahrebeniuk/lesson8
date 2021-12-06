@@ -1,14 +1,17 @@
-
 import java.util.Scanner;
 
 public class Armstrong {
+
     public static void main(String[] args) {
+        Armstrong armstrong = new Armstrong();
+        long sum = 0;
+        long number = 0;
+
         System.out.print("Please enter a number:" + " ");
         Scanner scan = new Scanner(System.in);
-        long number = scan.nextLong();
+        number = scan.nextLong();
         String num = String.valueOf(number);
-        long sum = 0;
-        printNum(number,sum);
+        armstrong.printNum(number, sum);
         for (int i = 0; i < num.length(); i++) {
 
             sum += Math.pow(num.charAt(i), num.length());
@@ -16,9 +19,10 @@ public class Armstrong {
         }
     }
 
-    public static void printNum(long number, long sum) {
+
+    public void printNum (long number, long sum) {
         if (sum == number) {
-            System.out.print(number + " " + "is an armstrong number");
+            System.out.println(number + " " + "is an armstrong number");
         } else {
             System.out.print(number + " " + "is not an armstrong number");
         }

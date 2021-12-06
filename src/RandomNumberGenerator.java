@@ -3,15 +3,16 @@ package lesson6;
 public class RandomNumberGenerator {
 
     public static void main(String[] args) {
-        String str1 = generateString("alpha", 10);
+        RandomNumberGenerator randomNumberGenerator = new RandomNumberGenerator();
+        String str1 = randomNumberGenerator.generateString("alpha", 10);
         System.out.println(str1);
-        String str2 = generateString("numeric", 10);
+        String str2 = randomNumberGenerator.generateString("numeric", 10);
         System.out.println(str2);
-        String str3 = generateString("alphanumeric", 10);
+        String str3 = randomNumberGenerator.generateString("alphanumeric", 10);
         System.out.println(str3);
     }
 
-    public static String generateString (String mode,int lenght){
+    public String generateString (String mode,int lenght){
         String alpha = "abcdefghijklmnopqrstuvwxyz";
         String numeric = "0123456789";
         String alphanumeric = alpha + numeric;
